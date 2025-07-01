@@ -5,7 +5,7 @@ use App\Http\Controllers\LPController;
 use Illuminate\Http\Request;
 
 Route::view('/', 'lp_formulario');
-Route::post('/resolver-lp', [LPController::class, 'resolver']);
+Route::post('/resolver-lp', [LPController::class, 'resolverLP']);
 
 Route::post('/language-switch', function (Request $request) {
     $locale = $request->input('locale');

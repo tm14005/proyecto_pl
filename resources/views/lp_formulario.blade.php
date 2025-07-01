@@ -18,10 +18,7 @@
 <a href="#contenido-principal" class="visually-hidden-focusable" tabindex="0">{{ __('messages.skip_to_main') ?? 'Saltar al contenido principal' }}</a>
 <div class="container">
     <div class="d-flex justify-content-end mb-2">
-        <button class="btn btn-outline-secondary btn-sm"
-                id="boton-tema"
-                aria-label="{{ __('messages.toggle_theme') }}"
-                tabindex="0">
+        <button class="btn btn-outline-secondary btn-sm" id="boton-tema" aria-label="{{ __('messages.toggle_theme') }}" tabindex="0">
             🌗 {{ __('messages.toggle_theme') }}
         </button> &nbsp;
         <form action="{{ route('language.switch') }}" method="POST" id="form-idioma" aria-label="Selector de idioma">
@@ -50,32 +47,15 @@
                 <form id="form-pl" aria-label="{{ __('messages.lp_problem') }}">
                     <div class="mb-3">
                         <label for="funcion-objetivo" class="form-label">{{ __('messages.objective_function') }}</label>
-                        <input type="text"
-                            id="funcion-objetivo"
-                            name="funcion_objetivo"
-                            class="form-control"
-                            placeholder="{{ __('messages.objective_placeholder') }}"
-                            required
-                            aria-required="true"
-                            aria-describedby="desc-objetivo">
+                        <input type="text" id="funcion-objetivo" name="funcion_objetivo" class="form-control" placeholder="{{ __('messages.objective_placeholder') }}" required aria-required="true" aria-describedby="desc-objetivo">
                         <span id="desc-objetivo" class="form-text">{{ __('messages.objective_placeholder') }}</span>
                     </div>
                     <div class="mb-3">
                         <label for="restricciones" class="form-label">{{ __('messages.constraints') }}</label>
-                        <textarea id="restricciones"
-                                  name="restricciones"
-                                  rows="5"
-                                  class="form-control"
-                                  placeholder="{{ __('messages.constraints_placeholder') }}"
-                                  required
-                                  aria-required="true"
-                                  aria-describedby="desc-restricciones"></textarea>
+                        <textarea id="restricciones" name="restricciones" rows="5" class="form-control" placeholder="{{ __('messages.constraints_placeholder') }}" required aria-required="true" aria-describedby="desc-restricciones"></textarea>
                         <span id="desc-restricciones" class="form-text">{{ __('messages.constraints_placeholder') }}</span>
                     </div>
-                    <button type="submit"
-                            class="btn btn-success"
-                            id="boton-resolver"
-                            aria-label="{{ __('messages.solve_and_plot') }}">
+                    <button type="submit" class="btn btn-success" id="boton-resolver" aria-label="{{ __('messages.solve_and_plot') }}">
                         {{ __('messages.solve_and_plot') }}
                     </button>
                     <div id="cargando" class="ms-3 spinner-border text-primary" role="status" aria-live="polite">
@@ -93,24 +73,16 @@
                         <canvas id="canvas-pl" role="img" aria-label="{{ __('messages.feasible_region') }}"></canvas>
                     </div>
                     <div class="mt-2">
-                        <button id="reiniciar-zoom"
-                                class="btn btn-outline-info btn-sm"
-                                aria-label="{{ __('messages.reset_zoom') }}">
+                        <button id="reiniciar-zoom" class="btn btn-outline-info btn-sm" aria-label="{{ __('messages.reset_zoom') }}">
                             {{ __('messages.reset_zoom') }}
                         </button>
-                        <button id="descargar-png"
-                                class="btn btn-outline-success btn-sm"
-                                aria-label="{{ __('messages.download_png') }}">
+                        <button id="descargar-png" class="btn btn-outline-success btn-sm" aria-label="{{ __('messages.download_png') }}">
                             {{ __('messages.download_png') }}
                         </button>
-                        <button id="descargar-pdf"
-                                class="btn btn-outline-danger btn-sm"
-                                aria-label="{{ __('messages.download_pdf') }}">
+                        <button id="descargar-pdf" class="btn btn-outline-danger btn-sm" aria-label="{{ __('messages.download_pdf') }}">
                             {{ __('messages.download_pdf') }}
                         </button>
-                        <button id="descargar-todo-pdf"
-                                class="btn btn-outline-primary btn-sm"
-                                aria-label="{{ __('messages.export_all_pdf') }}">
+                        <button id="descargar-todo-pdf" class="btn btn-outline-primary btn-sm" aria-label="{{ __('messages.export_all_pdf') }}">
                             {{ __('messages.export_all_pdf') }}
                         </button>
                     </div>
