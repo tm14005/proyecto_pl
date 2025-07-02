@@ -14,10 +14,18 @@
     <!-- html2canvas para capturar contenido HTML como imagen -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
 </head>
-<body>
+<body style="padding-top:0;">
+    <header class="bg-dark text-white py-3" style="margin-bottom:10px;">
+        <div class="container">
+            <h1 class="h3 m-0 text-center">Proyecto Programación Lineal - Método Gráfico</h1>
+        </div>
+    </header>
 <a href="#contenido-principal" class="visually-hidden-focusable" tabindex="0">{{ __('messages.skip_to_main') ?? 'Saltar al contenido principal' }}</a>
-<div class="container">
+<div class="container" >
     <div class="d-flex justify-content-end mb-2">
+        <button id="btn-presentacion" class="btn btn-outline-secondary btn-sm">
+         Comenzar la presentación
+        </button>&nbsp;
         <button class="btn btn-outline-secondary btn-sm" id="boton-tema" aria-label="{{ __('messages.toggle_theme') }}" tabindex="0">
             🌗 {{ __('messages.toggle_theme') }}
         </button> &nbsp;
@@ -91,6 +99,30 @@
         </div>
     </main>
 </div>
+
+<!-- Modal de presentación -->
+<div class="modal fade" id="modalPresentacion" tabindex="-1" aria-labelledby="modalPresentacionLabel" aria-hidden="true">
+  <div class="modal-dialog modal-lg modal-dialog-centered">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="modalPresentacionLabel">Presentación del Proyecto</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Cerrar"></button>
+      </div>
+      <div class="modal-body" id="modalPresentacionCuerpo">
+        <!-- Aquí irá el contenido dinámico -->
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" id="btnAnterior" style="display:none">Anterior</button>
+        <button type="button" class="btn btn-primary" id="btnSiguiente">Siguiente</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<footer class="bg-dark text-white text-center py-2 " style="z-index:1030;">
+    Materia: Métodos de Optimización. | Alumno: Mario Nelson Torres Mena
+</footer>
+
 <script>
     // Traducciones JS desde PHP para el archivo JS
     window.traduccionesPL = {
@@ -111,5 +143,7 @@
     };
 </script>
 <script src="{{ asset('js/lp.js') }}"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+<script src="{{ asset('js/presentacion.js') }}"></script>
 </body>
 </html>

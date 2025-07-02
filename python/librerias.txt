@@ -1,3 +1,4 @@
-flask
-numpy
-scipy
+pip install flask
+pip install sympy
+pip install numpy
+pip install flask sympy numpy
